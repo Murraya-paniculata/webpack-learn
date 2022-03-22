@@ -1,0 +1,15 @@
+{
+  "name": "webpack-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Murraya-paniculata/webpack-learn.git",
+  "author": "Murraya-paniculata <1395039366@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development"
+  },
+  "dependencies": {
+    "webpack": "^5.70.0"
+  }
+}
