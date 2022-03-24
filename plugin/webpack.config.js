@@ -1,3 +1,4 @@
+const FileListPlugin = require('./plugins/FileListPlugin');
 var Myplugin = require('./plugins/MyPlugin');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new Myplugin()
+        new Myplugin(),
+        new FileListPlugin("list")
     ]
 }
