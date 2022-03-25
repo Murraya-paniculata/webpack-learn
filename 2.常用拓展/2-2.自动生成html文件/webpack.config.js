@@ -1,5 +1,6 @@
 var path = require("path");
 var { CleanWebpackPlugin } = require("clean-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = function(env){
     console.log(env);
@@ -12,7 +13,14 @@ module.exports = function(env){
         },
         module: {},
         plugins: [
-            new CleanWebpackPlugin()
+            new CleanWebpackPlugin(),
+            new HtmlWebpackPlugin({
+                template: './public/index.html',
+                title: 'my app',
+                scriptLoading: 'blocking',
+                // chunks: 入口配置的key
+                filename: 'home.html'
+            })
         ]
     }
 }
